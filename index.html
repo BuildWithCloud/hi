@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message Me</title>
+  <style>
+    :root {
+      /* Hex colour variables for each character */
+      --colour-m1: #000000;
+      --colour-s:  #000000;
+      --colour-g:  #000000;
+      --colour-space: #000000;
+      --colour-m2: #000000;
+      --colour-e:  #000000;
+    }
+    body {
+      display: flex;
+      justify-content: centre;
+      align-items: centre;
+      height: 100vh;
+      margin: 0;
+      background: #f5f5f5;
+      font-family: sans-serif;
+    }
+    .msg span {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    .m1 { colour: var(--colour-m1); }
+    .s  { colour: var(--colour-s);  }
+    .g  { colour: var(--colour-g);  }
+    .space { colour: var(--colour-space); }
+    .m2 { colour: var(--colour-m2); }
+    .e  { colour: var(--colour-e);  }
+  </style>
+</head>
+<body>
+  <div class="msg">
+    <span class="m1">m</span>
+    <span class="s">s</span>
+    <span class="g">g</span>
+    <span class="space">&nbsp;</span>
+    <span class="m2">m</span>
+    <span class="e">e</span>
+  </div>
+  <script>
+    // Example: dynamically change colours via JavaScript
+    const root = document.documentElement;
+    const colours = {
+      m1: '#ff0000',
+      s:  '#00ff00',
+      g:  '#0000ff',
+      space: '#000000',
+      m2: '#FFA500',
+      e:  '#800080'
+    };
+    for (const [key, value] of Object.entries(colours)) {
+      root.style.setProperty(`--colour-${key}`, value);
+    }
+  </script>
+</body>
+</html>
