@@ -43,20 +43,5 @@
     <span class="m2">m</span>
     <span class="e">e</span>
   </div>
-  <script>
-    // Example: dynamically change colours via JavaScript
-    const root = document.documentElement;
-    const colours = {
-      m1: '#ff0000',
-      s:  '#00ff00',
-      g:  '#0000ff',
-      space: '#000000',
-      m2: '#FFA500',
-      e:  '#800080'
-    };
-    for (const [key, value] of Object.entries(colours)) {
-      root.style.setProperty(`--colour-${key}`, value);
-    }
-  </script>
 </body>
 </html>
